@@ -45,3 +45,10 @@ System.out.println(mensaje);
 | `++`     | Incremento            | `a++` o `++a`    | 11 (para `a++`)           |
 | `--`     | Decremento            | `a--` o `--a`    | 9 (para `a--`)            |
 
+## Tipos de acceso.
+| Tipo de Acceso | Alcance                                      | Descripción                                                                                                                                                                    |
+|----------------|----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Public         | En cualquier lugar                           | Accesible desde cualquier otra clase, ya sea en el mismo paquete o en otro paquete. Se utiliza para indicar que el miembro es parte de la interfaz pública de la clase.        |
+| Private        | Dentro de la misma clase                     | Accesible solo dentro de la misma clase. No es accesible desde clases fuera de la clase que lo contiene, incluso si están en el mismo paquete. Se usa para encapsular.         |
+| Protected      | Dentro del mismo paquete y subclases         | Accesible dentro del mismo paquete y por clases derivadas (subclases) de la clase que lo contiene, ya sea dentro del mismo paquete o en otro paquete.                           |
+| Default        | Dentro del mismo paquete                     | Accesible solo dentro del mismo paquete. No es accesible desde clases fuera del paquete que lo contiene, incluso si son subclases de la clase que lo contiene.             |
