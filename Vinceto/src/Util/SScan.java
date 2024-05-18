@@ -13,27 +13,27 @@ public class SScan {
     }
 
     public Object escanear(String type) {
-        switch (type) {
+        switch (type.toLowerCase()) {
             case "int":
-                return getInt("Ingresa un entero: ");
+                return getInt("de tipo entero: ");
             case "float":
-                return getFloat("Ingresa un float: ");
+                return getFloat("de tipo float: ");
             case "long":
-                return getLong("Ingresa un long integer: ");
+                return getLong("de tipo long integer: ");
             case "double":
-                return getDouble("Ingresa un double: ");
+                return getDouble("de tipo double: ");
             case "byte":
-                return getByte("Ingresa un byte: ");
+                return getByte("de tipo byte: ");
             case "short":
-                return getShort("Ingresa un short integer: ");
+                return getShort("de tipo short integer: ");
             case "biginteger":
-                return getBigInteger("Ingresa un BigInteger: ");
+                return getBigInteger("de tipo BigInteger: ");
             case "bigdecimal":
-                return getBigDecimal("Ingresa un BigDecimal: ");
+                return getBigDecimal("de tipo BigDecimal: ");
             case "string":
-                return getString("Ingresa un string: ");
+                return getString("de tipo cadena: ");
             case "boolean":
-                return getBoolean("Ingresa un boolean (true/false): ");
+                return getBoolean("de tipo boolean (true/false): ");
             default:
                 System.out.println("Tipo inválido, intente nuevamente.");
                 return null;
@@ -47,7 +47,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un entero: ");
             sc.next();
         }
-        return sc.nextInt();
+        int result = sc.nextInt();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // Float
@@ -57,7 +59,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un float: ");
             sc.next();
         }
-        return sc.nextFloat();
+        float result = sc.nextFloat();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // Long
@@ -67,7 +71,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un long integer: ");
             sc.next();
         }
-        return sc.nextLong();
+        long result = sc.nextLong();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // Double
@@ -77,7 +83,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un double: ");
             sc.next();
         }
-        return sc.nextDouble();
+        double result = sc.nextDouble();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // Byte
@@ -87,7 +95,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un byte: ");
             sc.next();
         }
-        return sc.nextByte();
+        byte result = sc.nextByte();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // Short
@@ -97,7 +107,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un short integer: ");
             sc.next();
         }
-        return sc.nextShort();
+        short result = sc.nextShort();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // BigInteger
@@ -107,7 +119,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un BigInteger: ");
             sc.next();
         }
-        return sc.nextBigInteger();
+        BigInteger result = sc.nextBigInteger();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // BigDecimal
@@ -117,7 +131,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese un BigDecimal: ");
             sc.next();
         }
-        return sc.nextBigDecimal();
+        BigDecimal result = sc.nextBigDecimal();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     // String
@@ -133,7 +149,9 @@ public class SScan {
             System.out.print("Entrada inválida. Por favor ingrese verdadero o falso: ");
             sc.next();
         }
-        return sc.nextBoolean();
+        boolean result = sc.nextBoolean();
+        sc.nextLine(); // Consumir el salto de línea
+        return result;
     }
 
     public void close() {
