@@ -35,7 +35,7 @@ public class Utilidad {
 
     public static void esperar(int segundos) {
         try {
-            Thread.sleep(segundos * 360);
+            Thread.sleep(segundos * 1000);
         } catch (InterruptedException e) {
             System.out.println("Error en el tiempo de espera: " + e.getMessage());
         }
